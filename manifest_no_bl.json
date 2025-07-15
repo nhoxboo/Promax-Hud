@@ -1,0 +1,11 @@
+{
+  "name": "ProMax",
+  "version": "7.17",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [{ "path": "firmware/firmware_no_bl.bin", "offset": 0 }]
+    }
+  ]
+}

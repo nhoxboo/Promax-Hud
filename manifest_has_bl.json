@@ -1,0 +1,19 @@
+{
+  "name": "ProMax",
+  "version": "7.17",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [{ "path": "firmware/firmware.bin", "offset": 0 }]
+    },
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [{ "path": "firmware/firmware_s.bin", "offset": 0 }]
+    },
+    {
+      "chipFamily": "ESP32-C3",
+      "parts": [{ "path": "firmware/firmware_c.bin", "offset": 0 }]
+    }
+  ]
+}

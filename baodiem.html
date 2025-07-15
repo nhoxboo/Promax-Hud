@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cài đặt BaoDiem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cài đặt BaoDiem</h1>
+            <div class="connection-status">
+                Trạng thái: <strong id="bleState">Chưa kết nối</strong>
+            </div>
+             <button id="connectBleButton" class="button-primary">Kết nối BaoDiem</button>
+             <button id="disconnectBleButton" class="button-secondary" style="display: none;">Ngắt kết nối</button>
+        </header>
+
+        <main id="configBlock" style="display: none;">
+            <div class="controls-row">
+                 <button id="loadConfigButton" class="button-secondary">Tải lại cấu hình</button>
+                 <button id="sendButton" class="button-primary">Gửi thay đổi</button>
+            </div>
+            <div id="sendState" class="status-message"></div>
+
+
+            <div class="card">
+                <h2>Cài đặt chế độ ngủ</h2>
+                <div class="setting">
+                    <label for="awake_duration">Thời gian thức (giây)</label>
+                    <input type="number" id="awake_duration" min="0">
+                </div>
+                 <div class="setting">
+                    <label for="sleep_duration">Thời gian ngủ (giây)</label>
+                    <input type="number" id="sleep_duration" min="0">
+                </div>
+            </div>
+             <input type="text" id="configOutput" readonly style="display: none;">
+        </main>
+    </div>
+
+    <script src="baodiem.js"></script>
+</body>
+</html>

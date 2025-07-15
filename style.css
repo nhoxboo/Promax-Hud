@@ -1,0 +1,193 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f4f7f9;
+    --card-background: #ffffff;
+    --text-color: #333;
+    --light-text-color: #666;
+    --border-color: #e0e0e0;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
+.connection-status {
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+#bleState {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+#bleState.connected {
+    background-color: var(--success-color);
+}
+
+#bleState.connecting {
+    background-color: #ffc107;
+}
+
+#bleState.error {
+    background-color: var(--error-color);
+}
+
+
+.button-primary, .button-secondary {
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.button-primary:hover {
+    background-color: #0056b3;
+}
+
+.button-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.button-secondary:hover {
+    background-color: #5a6268;
+}
+
+.card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    margin-top: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.25em;
+    color: var(--primary-color);
+}
+
+.setting {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.setting:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.setting label {
+    flex-basis: 40%;
+    font-weight: bold;
+}
+
+.setting select, .setting input[type="text"], .setting input[type="number"], .setting input[type="range"], .setting input[type="color"] {
+    flex-basis: 55%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1em;
+}
+.setting input[type="range"] {
+    padding: 0;
+}
+.setting input[type="color"] {
+    padding: 2px;
+    height: 35px;
+}
+
+
+.setting small {
+    flex-basis: 100%;
+    margin-top: 5px;
+    color: var(--light-text-color);
+    font-size: 0.85em;
+    text-align: right;
+}
+
+.controls-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.status-message {
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+}
+#sendState.success {
+    color: var(--success-color);
+}
+
+.update-card {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .setting {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .setting label {
+        margin-bottom: 5px;
+    }
+    .setting select, .setting input {
+        width: 100%;
+    }
+     .setting small {
+        text-align: left;
+    }
+}
